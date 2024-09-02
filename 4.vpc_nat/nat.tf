@@ -1,6 +1,6 @@
 # nat gw
 resource "aws_eip" "nat" {
-  vpc = true
+  domain = vpc
 }
 resource "aws_nat_gateway" "nat-gw" {
   allocation_id = aws_eip.nat.id
